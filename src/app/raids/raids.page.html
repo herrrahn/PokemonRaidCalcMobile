@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Raid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Pokemon to Raid</ion-list-header>
+    <ion-item>
+      <ion-label>Pokemon</ion-label>
+      <ion-select placeholder="Select One" [(ngModel)]="pokemon">
+        <ion-select-option value="rayquaza">Rayquaza</ion-select-option>
+        <ion-select-option value="suicune">Suicune</ion-select-option>
+        <ion-select-option value="dragonite">Dragonite</ion-select-option>
+        <ion-select-option value="granbull">Granbull</ion-select-option>
+        <ion-select-option value="lapras">Lapras</ion-select-option>
+        <ion-select-option value="MAROWAK_ALOLA_FORM">Marowak - Alola</ion-select-option>
+        <ion-select-option value="togetic">Togetic</ion-select-option>
+        <ion-select-option value="tyranitar">Tyranitar</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Raid level</ion-label>
+
+      <ion-select placeholder="Select One" [(ngModel)]="level">
+        <ion-select-option value="5">5</ion-select-option>
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Weather</ion-label>
+      <ion-select [(ngModel)]="weather" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="NO_WEATHER">Extreme</ion-select-option>
+        <ion-select-option value="CLEAR">Sunny/Clear</ion-select-option>
+        <ion-select-option value="RAINY">Rainy</ion-select-option>
+        <ion-select-option value="PARTLY_CLOUDY">Partly Cloudy</ion-select-option>
+        <ion-select-option value="OVERCAST">Cloudy</ion-select-option>
+        <ion-select-option value="WINDY">Windy</ion-select-option>
+        <ion-select-option value="SNOW">Snow</ion-select-option>
+        <ion-select-option value="FOG">Fog</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Friendship level</ion-label>
+      <ion-select [(ngModel)]="friendship" okText="Okay" cancelText="Dismiss">
+        <ion-select-option value="4">4</ion-select-option>
+        <ion-select-option value="3">3</ion-select-option>
+        <ion-select-option value="2">2</ion-select-option>
+        <ion-select-option value="1">1</ion-select-option>
+        <ion-select-option value="0">0</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+  </ion-list>
+  <section>
+    <ion-button expand="block" (click)="toResults()">Run</ion-button>
+  </section>
+</ion-content>
